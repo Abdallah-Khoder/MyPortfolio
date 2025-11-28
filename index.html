@@ -9,7 +9,7 @@
 <body>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero fade-in">
         <div class="hero-content">
             <h1>Abdallah Khoder</h1>
             <p>Web Developer (HTML / CSS / PHP | JavaScript | MySQL)</p>
@@ -18,7 +18,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about fade-in">
         <h2>About Me</h2>
         <p>
             I'm a passionate web developer with experience in front-end and 
@@ -27,8 +27,8 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
-        <h2>Skills</h2>
+    <section class="skills fade-in">
+        <h2 class="fade-in">Skills</h2>
         <div class="skills-grid">
             <span>HTML</span>
             <span>CSS</span>
@@ -42,7 +42,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section class="projects fade-in" id="projects">
         <h2>Projects</h2>
 
         <div class="project">
@@ -69,7 +69,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact fade-in">
         <h2>Contact Me</h2>
         <p>Email: <strong>abdallahkhodor746@gmail.com</strong></p>
         <p>GitHub: <a href="https://github.com/Abdallah-Khoder" target="_blank">Visit Profile</a></p>
@@ -79,5 +79,22 @@
         <p>© 2025 Abdallah Khoder. All Rights Reserved.</p>
     </footer>
 
+
+    <script>
+        const elements = document.querySelectorAll('.fade-in');
+
+        function checkFadeIn() {
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFadeIn);
+        window.addEventListener('load', checkFadeIn);
+
+    </script>
 </body>
 </html>
