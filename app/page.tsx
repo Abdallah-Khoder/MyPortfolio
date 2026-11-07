@@ -2,38 +2,34 @@ const projects = [
   {
     number: "01",
     name: "SkillProof",
-    type: "Full-stack platform · Team project",
-    description: "A platform designed to help developers present verified project evidence and help recruiters evaluate practical skills through structured rubrics.",
+    type: "Team project · Full-stack platform",
+    description: "A platform that helps developers present project evidence and allows recruiters to evaluate practical skills through structured rubrics.",
     stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
-    href: "https://github.com/AbdullahBe11/techtalks-skillproof",
-    link: "View source"
+    href: "https://github.com/AbdullahBe11/techtalks-skillproof"
   },
   {
     number: "02",
     name: "E-commerce Store",
     type: "Full-stack application",
-    description: "An e-commerce application with a React frontend and Django REST API, including token-based authentication and product workflows.",
+    description: "An e-commerce application with a React frontend and Django REST API, including token-based authentication.",
     stack: ["React", "Django", "DRF", "SQLite"],
-    href: "https://github.com/Abdallah-Khoder/CodeAlpha_E-commerceStore",
-    link: "View source"
+    href: "https://github.com/Abdallah-Khoder/CodeAlpha_E-commerceStore"
   },
   {
     number: "03",
     name: "Vibely",
-    type: "Full-stack application · Solo project",
-    description: "A full-stack application built independently, connecting a React interface to a Django REST Framework backend.",
+    type: "Solo project · Full-stack application",
+    description: "A project built independently, connecting a React interface to a Django REST Framework backend.",
     stack: ["React", "Django", "DRF", "SQLite", "Pillow"],
-    href: "https://github.com/Abdallah-Khoder",
-    link: "GitHub profile"
+    href: "https://github.com/Abdallah-Khoder"
   },
   {
     number: "04",
     name: "Contact Manager",
     type: "Java desktop application",
-    description: "A contact management application structured with MVC, using the Observer design pattern and supporting contact groups.",
+    description: "A contact management application structured with MVC and the Observer design pattern.",
     stack: ["Java", "OOP", "MVC", "Observer Pattern"],
-    href: "https://github.com/Abdallah-Khoder/ContactManager",
-    link: "View source"
+    href: "https://github.com/Abdallah-Khoder/ContactManager"
   }
 ];
 
@@ -48,78 +44,77 @@ export default function Home() {
   return (
     <main>
       <nav className="nav wrap">
-        <a className="brand" href="#home">AK<span>.</span></a>
+        <a className="brand" href="#home">Abdallah<span>.</span></a>
         <div className="nav-links">
-          <a href="#about">About</a><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+          <a href="#about">About</a>
+          <a href="#work">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
-        <a className="nav-cta" href="mailto:khoderabdallah57@gmail.com">Let&apos;s talk <span>↗</span></a>
       </nav>
 
       <section className="hero wrap" id="home">
-        <div className="hero-copy">
-          <p className="eyebrow"><span className="status-dot" /> AVAILABLE FOR OPPORTUNITIES</p>
-          <h1>Building useful<br />things for the <em>web.</em></h1>
-          <p className="hero-text">I&apos;m Abdallah Khodor, a Computer Science student and full-stack web developer focused on building practical, user-centered applications.</p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#work">Explore my work <span>↘</span></a>
-            <a className="text-link" href="https://github.com/Abdallah-Khoder" target="_blank" rel="noreferrer">GitHub profile ↗</a>
-          </div>
+        <p className="eyebrow">COMPUTER SCIENCE STUDENT · WEB DEVELOPER</p>
+        <h1>Hi, I&apos;m Abdallah.<br /><span>I build web applications.</span></h1>
+        <p className="hero-text">I&apos;m a Computer Science student interested in full-stack web development. I enjoy learning, solving problems, and turning ideas into practical applications.</p>
+        <div className="hero-actions">
+          <a className="button" href="#work">View my projects</a>
+          <a className="text-link" href="mailto:abdallahkhodor746@gmail.com">Get in touch</a>
         </div>
-        <div className="hero-aside">
-          <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-          <div className="monogram">A<span>K</span></div>
-          <p className="aside-note">Curious by nature.<br />Developer by practice.</p>
-          <span className="hero-index">LEBANON · 2026</span>
-        </div>
-        <div className="hero-bottom"><span>SCROLL TO EXPLORE</span><span>01 — 04</span></div>
       </section>
 
-      <section className="section wrap about" id="about">
-        <div className="section-label"><span>01</span> / ABOUT</div>
+      <section className="section wrap" id="about">
+        <div className="section-heading"><span>01</span><h2>About me</h2></div>
         <div className="about-content">
-          <h2>Developer with a<br /><em>builder&apos;s mindset.</em></h2>
           <p>I&apos;m currently in the final semester of my Computer Science studies at ISSAE-CNAM Liban. I enjoy turning ideas into working web applications, learning new technologies, and understanding how frontend and backend systems fit together.</p>
-          <p>My experience includes building projects with React, Django, Django REST Framework, Next.js, and relational databases — both independently and as part of a team.</p>
-          <div className="about-meta"><span>BASED IN</span><strong>Lebanon</strong><span>FOCUS</span><strong>Full-stack web development</strong></div>
+          <p>I&apos;ve worked on projects using React, Django, Django REST Framework, Next.js, and relational databases — both independently and as part of a team.</p>
         </div>
       </section>
 
       <section className="section projects-section" id="work">
         <div className="wrap">
-          <div className="section-label"><span>02</span> / SELECTED WORK</div>
-          <div className="section-heading"><h2>Things I&apos;ve <em>built.</em></h2><p>A selection of projects that reflect what I&apos;ve been learning and building.</p></div>
-          <div className="project-list">
+          <div className="section-heading"><span>02</span><h2>Projects</h2></div>
+          <p className="section-intro">A few projects I&apos;ve worked on during my learning journey.</p>
+          <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.number}>
-                <span className="project-number">{project.number}</span>
-                <div className="project-main">
-                  <p className="project-type">{project.type}</p>
-                  <h3>{project.name}</h3>
-                  <p className="project-description">{project.description}</p>
-                  <div className="tags">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-                </div>
-                <a className="project-link" href={project.href} target="_blank" rel="noreferrer">{project.link} <span>↗</span></a>
+                <p className="project-type">{project.type}</p>
+                <h3>{project.name}</h3>
+                <p className="project-description">{project.description}</p>
+                <div className="tags">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
+                <a className="project-link" href={project.href} target="_blank" rel="noreferrer">View project on GitHub ↗</a>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section wrap skills-section" id="skills">
-        <div className="section-label"><span>03</span> / TOOLKIT</div>
-        <div className="section-heading"><h2>My technical <em>toolkit.</em></h2><p>Technologies I&apos;ve used across coursework and projects.</p></div>
+      <section className="section wrap" id="skills">
+        <div className="section-heading"><span>03</span><h2>Technologies & tools</h2></div>
+        <p className="section-intro">Technologies I&apos;ve used across coursework and projects.</p>
         <div className="skill-grid">
-          {skillGroups.map((group) => <div className="skill-group" key={group.title}><h3>{group.title}</h3><div className="skill-items">{group.items.map((item) => <span key={item}>{item}</span>)}</div></div>)}
+          {skillGroups.map((group) => (
+            <div className="skill-group" key={group.title}>
+              <h3>{group.title}</h3>
+              <div className="skill-items">{group.items.map((item) => <span key={item}>{item}</span>)}</div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section className="contact-section" id="contact">
-        <div className="wrap contact-inner">
-          <div className="section-label"><span>04</span> / GET IN TOUCH</div>
-          <p className="contact-kicker">HAVE A PROJECT OR AN OPPORTUNITY?</p>
-          <h2>Let&apos;s make<br /><em>something matter.</em></h2>
-          <a className="contact-email" href="mailto:khoderabdallah57@gmail.com">khoderabdallah57@gmail.com ↗</a>
-          <div className="contact-bottom"><a href="https://www.linkedin.com/in/abdallah-khodor-928924303/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Abdallah-Khoder" target="_blank" rel="noreferrer">GitHub ↗</a><span>© 2026 ABDALLAH KHODOR</span></div>
+        <div className="wrap">
+          <div className="section-heading"><span>04</span><h2>Contact</h2></div>
+          <p className="contact-intro">Have a question or an opportunity? Feel free to reach out.</p>
+          <div className="contact-details">
+            <a href="mailto:abdallahkhodor746@gmail.com">abdallahkhodor746@gmail.com</a>
+            <a href="tel:+96176335732">+961 76 335 732</a>
+          </div>
+          <div className="contact-bottom">
+            <a href="https://www.linkedin.com/in/abdallah-khodor-928924303/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/Abdallah-Khoder" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <span>© 2026 Abdallah Khodor</span>
+          </div>
         </div>
       </section>
     </main>
