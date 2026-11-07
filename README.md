@@ -1,40 +1,30 @@
-# Personal Portfolio Website
+# Abdallah Khodor — Portfolio
 
-A modern and responsive personal portfolio website built to showcase my skills, projects, and contact information.
+Personal portfolio built with **Next.js**, **TypeScript**, and custom CSS.
 
-## Live Demo
-🔗 https://abdallah-khoder.github.io/MyPortfolio/
+## Development
 
-## Features
-- Responsive design for all screen sizes
-- Smooth fade-in scroll animations
-- Clean and modern UI
-- Projects showcase section
-- Contact information section
+```bash
+npm install
+npm run dev
+```
 
-## Built With
-- HTML5
-- CSS3
-- JavaScript
+## Production build
 
-## Sections Included
-- Hero Section
-- About Me
-- Skills
-- Projects
-- Contact
+```bash
+npm run build
+```
 
-## Projects Highlighted
-- Quiz Web App (Front End)
-- Quiz Web App (Back End)
-- To-Do List Application
-- Contact Manager (Java MVC)
+The project uses Next.js static export and is configured for GitHub Pages at:
 
-## Purpose
-This portfolio was created to present my web development skills and showcase personal projects for recruiters, clients, and collaborators.
+https://abdallah-khoder.github.io/MyPortfolio/
 
-## Author
-**Abdallah Khoder**
+## Deployment
+
+Every push to `main` triggers the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the static site and publishes the `out` directory to GitHub Pages.
+
+## Contact
 
 - GitHub: https://github.com/Abdallah-Khoder
-- Email: abdallahkhodor746@gmail.com
+- LinkedIn: https://www.linkedin.com/in/abdallah-khodor-928924303/
+- Email: khoderabdallah57@gmail.com
