@@ -63,7 +63,7 @@ export default function Home() {
       </section>
       <section className="section wrap" id="about"><div className="reveal">
         <div className="section-heading"><span>01</span><h2>About me</h2></div>
-        <div className="about-content"><p>I&apos;m a full-stack web developer who enjoys turning ideas into working web applications, learning new technologies, and understanding how frontend and backend systems fit together.</p><p>I&apos;ve built projects using React, Django, Django REST Framework, Next.js, and relational databases — both independently and as part of a team.</p></div>
+        <div className="about-content"><p>I&apos;m currently in the final semester of my Computer Science studies at ISSAE-CNAM Liban. Alongside my studies, I focus on building web applications and strengthening my skills in frontend and backend development.</p><p>I&apos;ve built projects using React, Django, Django REST Framework, Next.js, and relational databases — both independently and as part of a team. I enjoy turning ideas into working applications, learning new technologies, and understanding how different parts of a system fit together.</p></div>
       </div></section>
       <section className="section projects-section" id="work"><div className="wrap">
         <div className="reveal"><div className="section-heading"><span>02</span><h2>Projects</h2></div><p className="section-intro">A few projects I&apos;ve worked on.</p></div>
