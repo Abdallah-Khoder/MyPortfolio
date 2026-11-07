@@ -18,6 +18,23 @@ const navItems = [{ label: "Home", id: "home" }, { label: "About", id: "about" }
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    setDarkMode(initialDark);
+    document.documentElement.dataset.theme = initialDark ? "dark" : "light";
+  }, []);
+
+  function toggleTheme() {
+    const nextDark = !darkMode;
+    setDarkMode(nextDark);
+    document.documentElement.dataset.theme = nextDark ? "dark" : "light";
+    localStorage.setItem("portfolio-theme", nextDark ? "dark" : "light");
+  }
+
   useEffect(() => {
     const sections = navItems.map(({ id }) => document.getElementById(id)).filter((s): s is HTMLElement => s !== null);
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -36,7 +53,7 @@ export default function Home() {
     <main>
       <nav className="nav"><div className="nav-inner wrap">
         <a className="brand" href="#home">Abdallah<span>.</span></a>
-        <div className="nav-links">{navItems.map((item) => <a key={item.id} href={"#" + item.id} className={activeSection === item.id ? "active" : ""} aria-current={activeSection === item.id ? "location" : undefined}>{item.label}</a>)}</div>
+        <div className="nav-actions"><div className="nav-links">{navItems.map((item) => <a key={item.id} href={"#" + item.id} className={activeSection === item.id ? "active" : ""} aria-current={activeSection === item.id ? "location" : undefined}>{item.label}</a>)}</div><button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"} title={darkMode ? "Switch to light mode" : "Switch to dark mode"}>{darkMode ? "☀" : "☾"}</button></div>
       </div></nav>
       <section className="hero wrap" id="home">
         <p className="eyebrow">COMPUTER SCIENCE STUDENT · WEB DEVELOPER</p>
