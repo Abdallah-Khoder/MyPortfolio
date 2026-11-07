@@ -56,24 +56,24 @@ export default function Home() {
         <div className="nav-actions"><div className="nav-links">{navItems.map((item) => <a key={item.id} href={"#" + item.id} className={activeSection === item.id ? "active" : ""} aria-current={activeSection === item.id ? "location" : undefined}>{item.label}</a>)}</div><button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"} title={darkMode ? "Switch to light mode" : "Switch to dark mode"}>{darkMode ? "☀" : "☾"}</button></div>
       </div></nav>
       <section className="hero wrap" id="home">
-        <p className="eyebrow">COMPUTER SCIENCE STUDENT · WEB DEVELOPER</p>
+        <p className="eyebrow">FULL-STACK WEB DEVELOPER</p>
         <h1>Hi, I&apos;m Abdallah.<br /><span>I build web applications.</span></h1>
-        <p className="hero-text">I&apos;m a Computer Science student interested in full-stack web development. I enjoy learning, solving problems, and turning ideas into practical applications.</p>
+        <p className="hero-text">I&apos;m a full-stack web developer who enjoys building practical web applications, solving problems, and working across frontend and backend technologies.</p>
         <div className="hero-actions"><a className="button" href="#work">View my projects</a><a className="text-link" href="mailto:abdallahkhodor746@gmail.com">Get in touch</a></div>
       </section>
       <section className="section wrap" id="about"><div className="reveal">
         <div className="section-heading"><span>01</span><h2>About me</h2></div>
-        <div className="about-content"><p>I&apos;m currently in the final semester of my Computer Science studies at ISSAE-CNAM Liban. I enjoy turning ideas into working web applications, learning new technologies, and understanding how frontend and backend systems fit together.</p><p>I&apos;ve worked on projects using React, Django, Django REST Framework, Next.js, and relational databases — both independently and as part of a team.</p></div>
+        <div className="about-content"><p>I&apos;m a full-stack web developer who enjoys turning ideas into working web applications, learning new technologies, and understanding how frontend and backend systems fit together.</p><p>I&apos;ve built projects using React, Django, Django REST Framework, Next.js, and relational databases — both independently and as part of a team.</p></div>
       </div></section>
       <section className="section projects-section" id="work"><div className="wrap">
-        <div className="reveal"><div className="section-heading"><span>02</span><h2>Projects</h2></div><p className="section-intro">A few projects I&apos;ve worked on during my learning journey.</p></div>
+        <div className="reveal"><div className="section-heading"><span>02</span><h2>Projects</h2></div><p className="section-intro">A few projects I&apos;ve worked on.</p></div>
         <div className="project-grid">{projects.map((p, i) => <article className="project-card reveal" style={{ transitionDelay: (i * 90) + "ms" }} key={p.number}>
           <p className="project-type">{p.type}</p><h3>{p.name}</h3><p className="project-description">{p.description}</p>
           <div className="tags">{p.stack.map((item) => <span key={item}>{item}</span>)}</div><a className="project-link" href={p.href} target="_blank" rel="noreferrer">View project on GitHub ↗</a>
         </article>)}</div>
       </div></section>
       <section className="section wrap" id="skills"><div className="reveal">
-        <div className="section-heading"><span>03</span><h2>Technologies & tools</h2></div><p className="section-intro">Technologies I&apos;ve used across coursework and projects.</p>
+        <div className="section-heading"><span>03</span><h2>Technologies & tools</h2></div><p className="section-intro">Technologies I use across my projects.</p>
       </div><div className="skill-grid">{skillGroups.map((g, i) => <div className="skill-group reveal" style={{ transitionDelay: (i * 70) + "ms" }} key={g.title}>
         <h3>{g.title}</h3><div className="skill-items">{g.items.map((item) => <span key={item}>{item}</span>)}</div>
       </div>)}</div></section>
