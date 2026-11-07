@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const projects = [
   { number: "01", name: "SkillProof", type: "Team project · Full-stack platform", description: "A platform that helps developers present project evidence and allows recruiters to evaluate practical skills through structured rubrics.", stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma"], href: "https://github.com/AbdullahBe11/techtalks-skillproof" },
-  { number: "02", name: "E-commerce Store", type: "Full-stack application", description: "An e-commerce application with a React frontend and Django REST API, including token-based authentication.", stack: ["React", "Django", "DRF", "SQLite"], href: "https://github.com/Abdallah-Khoder/CodeAlpha_E-commerceStore" },
+  { number: "02", name: "E-commerce Store", type: "Solo project · Full-stack application", description: "An e-commerce application with a React frontend and Django REST API, including token-based authentication.", stack: ["React", "Django", "DRF", "SQLite"], href: "https://github.com/Abdallah-Khoder/CodeAlpha_E-commerceStore" },
   { number: "03", name: "Vibely", type: "Solo project · Full-stack application", description: "A project built independently, connecting a React interface to a Django REST Framework backend.", stack: ["React", "Django", "DRF", "SQLite", "Pillow"], href: "https://github.com/Abdallah-Khoder" },
   { number: "04", name: "Contact Manager", type: "Java desktop application", description: "A contact management application structured with MVC and the Observer design pattern.", stack: ["Java", "OOP", "MVC", "Observer Pattern"], href: "https://github.com/Abdallah-Khoder/ContactManager" }
 ];
